@@ -21,9 +21,11 @@
 
 <h2>1. Data the Add-on accesses</h2>
 <ul>
-  <li><strong>Spreadsheet content</strong> (scope <code>spreadsheets</code>): cell values, formulas, formatting, notes and row
-    groups of the spreadsheet in which the user runs an Add-on command, so that the command can read the production plan
-    and write its results (values, colors, notes and report sheets) back into that spreadsheet.</li>
+  <li><strong>Spreadsheet content</strong> (scopes <code>spreadsheets.currentonly</code> and <code>drive.file</code>): cell values,
+    formulas, formatting, notes and row groups of the spreadsheet in which the user runs an Add-on command, so that the command
+    can read the production plan and write its results (values, colors, notes and report sheets) back into that spreadsheet.
+    The first time the Add-on is used in a spreadsheet, the user selects that one file in the Google Picker to grant access;
+    the Add-on cannot access any other file in the user's Google Drive.</li>
   <li><strong>The user's email address</strong> (scope <code>userinfo.email</code>): used only to bind and check the activation
     code issued for that user.</li>
   <li><strong>Files the user selects</strong>: stock files (.xlsx) the user picks from their own computer in the Add-on sidebar.
